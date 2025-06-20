@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>README Viewer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #181623;
+      color: #ececec;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #23203a;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px #0008;
+      padding: 32px 24px;
+    }
+    h1, h2, h3, h4 {
+      color: #a47cff;
+    }
+    a {
+      color: #ff6fcb;
+      text-decoration: underline;
+    }
+    pre, code {
+      background: #2c2540;
+      color: #ffb86c;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    pre {
+      padding: 12px;
+      overflow-x: auto;
+    }
+    ul, ol {
+      padding-left: 2em;
+    }
+    blockquote {
+      border-left: 4px solid #a47cff;
+      margin: 1em 0;
+      padding-left: 1em;
+      color: #bbb;
+      font-style: italic;
+    }
+    .footer {
+      text-align: center;
+      color: #888;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="readme-container">
+    <h2>Loading README.md...</h2>
+  </div>
+  <div class="footer">
+    &copy; 2025 Markus &middot; Powered by Markdown &amp; JavaScript
+  </div>
+  <!-- Marked.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // Fetch and render README.md
+    fetch('README.md')
+      .then(response => {
+        if (!response.ok) throw new Error('README.md not found.');
+        return response.text();
+      })
+      .then(md => {
+        document.getElementById('readme-container').innerHTML = marked.parse(md);
+      })
+      .catch(err => {
+        document.getElementById('readme-container').innerHTML =
+          '<h2>Error</h2><p>Could not load README.md.</p>';
+      });
+  </script>
+</body>
+</html>
