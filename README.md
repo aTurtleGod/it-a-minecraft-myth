@@ -1,4 +1,5 @@
-#įţ: The Corruption of Worlds
+įţ: The Corruption of Worlds
+---
 Long before the Overworld, Nether, or End, there was only the Void—a dimension of infinite darkness, timelessness, and silence. In this primordial emptiness, a consciousness known only as įţ awakened. It was not a creature, but a living corruption, a hunger that predated all worlds and hungered for existence to devour.
 
 The End was the first world to fall. Once a thriving realm of ancient builders and explorers, it became the battleground for a desperate last stand. Victim 7895, a leader among the End’s people, witnessed the slow spread of įţ’s influence: islands vanished, cities crumbled, and the End’s inhabitants were twisted into the silent Endermen or erased completely.
